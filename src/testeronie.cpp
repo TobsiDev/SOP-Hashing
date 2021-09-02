@@ -8,18 +8,18 @@ int ping(const char *HashStr)
     const int lengT = leng + 1;
     char *charArr = new char[lengT];
 
-    std::vector<char> arrFirst;
-    //arrFirst.resize(leng);
-    std::copy(str.begin(), str.end(), std::back_inserter(arrFirst));
-    arrFirst.shrink_to_fit();
+    std::vector<char> vecArr;
+    //vecArr.resize(leng);
+    std::copy(str.begin(), str.end(), std::back_inserter(vecArr));
+    vecArr.shrink_to_fit();
 
     std::cout << "str: " << str << std::endl;
     std::cout << "leng: " << leng << std::endl;
     std::cout << "lengT: " << lengT << std::endl;
 
-    std::cout << "arrFirst: " << arrFirst.size() << std::endl;
-    postVec(arrFirst);
-    /*for (auto i = arrFirst.begin(); i != arrFirst.end(); ++i)
+    std::cout << "vecArr: " << vecArr.size() << std::endl;
+    postVec(vecArr);
+    /*for (auto i = vecArr.begin(); i != vecArr.end(); ++i)
     {
         std::cout << *i << " ";
         std::bitset<8> forster(*i);
@@ -34,7 +34,7 @@ int ping(const char *HashStr)
     //std::bitset<8> forster;*/
 
     std::cout << "Original Hash: " << HashStr << std::endl;
-    std::cout << "HashStr Byte Size: " << str.size() << std::endl;
+    //std::cout << "HashStr Byte Size: " << str.size() << std::endl;
 
     //delete[] charArr; // CLEANUP IS IMPORTANT
 
