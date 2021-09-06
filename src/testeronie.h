@@ -9,3 +9,7 @@
 int ping(const char *HashStr);
 
 void postVec(std::vector<char> vecArr);
+
+void postVecSHIFT(std::vector<char> vecArr, int shiftAmount);
+
+void postVecSHIFTOnly(std::vector<char> vecArr, int shiftAmount);
