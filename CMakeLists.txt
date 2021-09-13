@@ -6,7 +6,7 @@ enable_testing()
 
 add_subdirectory(src)
 
-find_package(SDL2 CONFIG REQUIRED)
+#find_package(SDL2 CONFIG REQUIRED)
 add_executable(CppHashSOP main.cpp)
 target_link_libraries(CppHashSOP PRIVATE src)
 

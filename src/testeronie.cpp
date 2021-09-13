@@ -40,6 +40,22 @@ int ping(const char *HashStr)
     postVecRotateR(vecArr, 2);
     std::cout << "\n";*/
 
+    // Bit shifting rotator test.
+    int st = 40309;
+    int IntShift = 6;
+
+    std::bitset<32> SR(st);
+    std::bitset<32> SL(st);
+    std::bitset<32> TR(TestRight(st, IntShift));
+    std::bitset<32> TL(TestLeft(st, IntShift));
+    std::bitset<32> S_Int(st);
+
+    std::cout << "Test int: " << st << " : " << S_Int;
+    std::cout << "\nTestR func numb -> " << st << "rotateAmount -> " << IntShift << ":\t" << TestRight(st, IntShift) << std::endl;
+    std::cout << "Start Bin: " << SR << " New Bin: " << TR << std::endl;
+    std::cout << "\nTestL func numb -> " << st << "rotateAmount -> " << IntShift << ":\t" << TestLeft(st, IntShift) << std::endl;
+    std::cout << "Start Bin: " << SL << " New Bin: " << TL << std::endl;
+
     std::cout << "Original Hash: " << HashStr << std::endl;
 
     return 100;
