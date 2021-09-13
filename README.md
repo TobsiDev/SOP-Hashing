@@ -95,3 +95,68 @@ Terminalen er GUD : *29647062729#*"
 
 Original Hash: Terminalen er GUD
 ``` 
+
+### Devlog 13-SEP-2021
+
+#### I made something that tests my Bit Shifting Rotation function.
+I tested this a few times and it seems to work (If you don't go over the integers numerical limit 2147483647). I've tested with the binarys 01001101011100101000110100010111 which is 1299352855, 00000000000000000000000110011101 which is 413 and 00000000000000000000000110011101 which is 255. You can see how i tested it below.
+
+```
+Test int: 1299352855 : 01001101011100101000110100010111
+TestR func numb -> 1299352855 rotateAmount -> 6:        1563806260
+Start Bin: 01001101011100101000110100010111 New Bin: 01011101001101011100101000110100
+
+TestL func numb -> 1299352855 rotateAmount -> 6:        1554204115
+Start Bin: 01001101011100101000110100010111 New Bin: 01011100101000110100010111010011
+
+
+
+Test int: 413 : 00000000000000000000000110011101
+TestR func numb -> 413 rotateAmount -> 6:       1946157062
+Start Bin: 00000000000000000000000110011101 New Bin: 01110100000000000000000000000110
+
+TestL func numb -> 413 rotateAmount -> 6:       26432
+Start Bin: 00000000000000000000000110011101 New Bin: 00000000000000000110011101000000
+
+
+
+Test int: 255 : 00000000000000000000000011111111
+TestR func numb -> 255 rotateAmount -> 6:       -67108861
+Start Bin: 00000000000000000000000011111111 New Bin: 11111100000000000000000000000011
+
+TestL func numb -> 255 rotateAmount -> 6:       16320
+Start Bin: 00000000000000000000000011111111 New Bin: 00000000000000000011111111000000
+```
+
+#### The code to make the Bit Shifting Rotation:
+```cpp
+//////////////////////////////////////////////////////////
+//              TESTING BITSHIFT ROTATION               //
+//////////////////////////////////////////////////////////
+
+int TestRight(int numb, int rotateAmount)
+{
+    // I use 32 because an int is 4 bytes which is 32 bits
+    return ((numb >> rotateAmount) | (numb << (32 - rotateAmount)));
+}
+
+int TestLeft(int numb, int rotateAmount)
+{
+    // I use 32 because an int is 4 bytes which is 32 bits
+    return ((numb << rotateAmount) | (numb >> (32 - rotateAmount)));
+}
+```
+
+
+
+## TODO:
+  - [x] Get something to work.
+  - [X] Get Bit shifting to work.
+  - [X] Get Bit shifting rotations to work.
+  - [ ] Fixup the 'final' prototype functions.
+  - [ ] Start researching a bit more on SHA Hashing functions.
+  - [ ] ...
+  - [ ] ...
+  - [ ] ...
+  - [ ] I Hash function that actually works.
+<!--  - [ ] a. -->

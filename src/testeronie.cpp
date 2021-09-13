@@ -41,7 +41,8 @@ int ping(const char *HashStr)
     std::cout << "\n";*/
 
     // Bit shifting rotator test.
-    int st = 40309;
+    //int st = (int)0b01001101011100101000110100010111;
+    int st = 255;
     int IntShift = 6;
 
     std::bitset<32> SR(st);
@@ -51,9 +52,9 @@ int ping(const char *HashStr)
     std::bitset<32> S_Int(st);
 
     std::cout << "Test int: " << st << " : " << S_Int;
-    std::cout << "\nTestR func numb -> " << st << "rotateAmount -> " << IntShift << ":\t" << TestRight(st, IntShift) << std::endl;
+    std::cout << "\nTestR func numb -> " << st << " rotateAmount -> " << IntShift << ":\t" << TestRight(st, IntShift) << std::endl;
     std::cout << "Start Bin: " << SR << " New Bin: " << TR << std::endl;
-    std::cout << "\nTestL func numb -> " << st << "rotateAmount -> " << IntShift << ":\t" << TestLeft(st, IntShift) << std::endl;
+    std::cout << "\nTestL func numb -> " << st << " rotateAmount -> " << IntShift << ":\t" << TestLeft(st, IntShift) << std::endl;
     std::cout << "Start Bin: " << SL << " New Bin: " << TL << std::endl;
 
     std::cout << "Original Hash: " << HashStr << std::endl;
