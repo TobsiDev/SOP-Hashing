@@ -34,6 +34,11 @@ int ping(const char *HashStr)
     std::cout << "Start: " << HashStr << " : ";
     postVecRotateL(vecArr, 2);
     std::cout << "\n";
+    /*
+    DBVecRotateR(vecArr, 2);
+    std::cout << "Start: " << HashStr << " : ";
+    postVecRotateR(vecArr, 2);
+    std::cout << "\n";*/
 
     std::cout << "Original Hash: " << HashStr << std::endl;
 
