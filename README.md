@@ -149,7 +149,7 @@ int TestLeft(int numb, int rotateAmount)
 
 ### Devlog 14-SEP-2021
 
-#### I made two functions that's used to converts a 32 bitset to a 8 bitset and char. And a function that prints out the entire 32 bitset to the console.
+#### I made two functions that converts a 32 bitset to a 8 bitset and char. And a function that prints out the entire 32 bitset to the console.
 
 ```c++
 // This takes the first (From the left side) 8 bits of a 32 bitset
