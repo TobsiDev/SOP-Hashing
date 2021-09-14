@@ -147,6 +147,39 @@ int TestLeft(int numb, int rotateAmount)
 }
 ```
 
+### Devlog 14-SEP-2021
+
+#### I made two functions that's used to converts a 32 bitset to a 8 bitset and char. And a function that prints out the entire 32 bitset to the console.
+
+```c++
+// This takes the first (From the left side) 8 bits of a 32 bitset
+char BS32_ToChar(std::bitset<32> bs)
+{
+    std::string str = bs.to_string();
+    std::bitset<8> BS8(str);
+    unsigned long ULong = BS8.to_ulong();
+    return (char)ULong;
+}
+
+// Prints the whole 32 bitset to the console
+void BS32Char_ToConsole(int Binary)
+{
+    std::bitset<32> LeftBS(Binary);
+    for (size_t i = 0; i < 4; i++)
+    {
+        std::cout << BS32_ToChar(LeftBS);
+        LeftBS = BSLeft(LeftBS, 8);
+    }
+    std::cout << std::endl;
+}
+```
+
+and i testet it out with this:
+
+```c++
+// 01000110 01101001 01101110 01100100 -> Find
+BS32Char_ToConsole(0b01000110011010010110111001100100); // Writes Find in console.
+```
 
 
 ## TODO:
